@@ -23,6 +23,7 @@ return {
 				"isort",
 				"black",
 				"ruff",
+				"gopls",
 			},
 		})
 	end,

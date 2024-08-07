@@ -8,7 +8,7 @@ return {
 	config = function()
 		neo_tree = require("neo-tree")
 		neo_tree.setup({
-			close_if_last_window = false,
+			close_if_last_window = true,
 			enable_git_status = true,
 			popup_border_style = "rounded",
 
@@ -27,12 +27,16 @@ return {
 				},
 
 				filesystem = {
-					hide_dotfiles = false,
-					hide_gitignored = false,
+					filtered_items = {
+						visible = true,
+					},
+					group_empty_dirs = true,
 				},
 			},
 
 			window = {
+				position = "left",
+				width = 50,
 				mappings = {
 					["<1-RightMouse>"] = "open_split",
 					["<2-LeftMouse>"] = "open",
